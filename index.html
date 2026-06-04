@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal | ELEMENT PC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #f4f7f6;
+            background-image: radial-gradient(#007bff1a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .img-tabla {
+            width: 100%;
+            height: 180px; 
+            object-fit: contain; 
+            background-color: white;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .img-tabla:hover {
+            transform: scale(1.05);
+        }
+
+        .img-oferta {
+            width: 100%;
+            height: 130px;
+            object-fit: contain;
+            background: white;
+        }
+
+        .card-custom {
+            background: white;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .section-title {
+            margin: 40px 0;
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .table-modern {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .table-modern td {
+            vertical-align: middle;
+            border: 1px solid #dee2e6;
+        }
+
+        .badge-price {
+            font-size: 1.1rem;
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        /* Estilos nuevos para la sección interactiva */
+        .game-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,123,255,0.2);
+        }
+        .game-card.selected {
+            border-color: #007bff;
+            background-color: #e6f2ff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand font-weight-bold" href="index.html">INICIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenido">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag1.html">ARTICULOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag2.html">PREENSAMBLADAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag3.html">TUTORIALES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag4.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag5.html">PEDIDOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practica4.html">BIOGRAFIA</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <img src="bannerasus.jpg" width="100%" height="auto" alt="Promoción Asus">
+    </header>
+
+    <div class="container text-center">
+        <h1 class="display-3 font-weight-bold mt-5">ELEMENT PC</h1>
+        <p class="lead text-muted">Tu destino definitivo para hardware de alto rendimiento</p>
+        
+        <h2 class="section-title">COMPONENTES</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-modern" style="width: 90%; margin: 0 auto;">
+                <tr align="center">
+                    <td width="25%"><img src="tarjetagrafica.jpg" class="img-tabla"><br><a href="https://ddtech.mx/productos/componentes/tarjetas-de-video" class="btn btn-link">TARJETAS GRÁFICAS</a></td>
+                    <td width="25%"><img src="motherboard.jpg" class="img-tabla"><br><a href="https://www.cyberpuerta.mx/Computo-Hardware/Componentes/Tarjetas-Madre/" class="btn btn-link">MOTHERBOARDS</a></td>
+                    <td width="25%"><img src="ram.jpg" class="img-tabla"><br><a href="https://www.amazon.com.mx/b?node=17296877011" class="btn btn-link">MEMORIA RAM</a></td>
+                    <td width="25%"><img src="gabinete.jpg" class="img-tabla"><br><a href="https://ocelot.com.mx/catalogo-productos-gamer/gabinetes-cat/" class="btn btn-link">GABINETES</a></td>
+                </tr>
+                <tr align="center">
+                    <td><img src="procesador.jpg" class="img-tabla"><br><a href="https://ddtech.mx/productos/componentes/procesadores" class="btn btn-link">PROCESADORES</a></td>
+                    <td><img src="refrigeracionliquida.jpg" class="img-tabla"><br><a href="https://ddtech.mx/productos/componentes/enf-liquidos-aio" class="btn btn-link">REFRIGERACIONES</a></td>
+                    <td><img src="fuentedepoder.jpg" class="img-tabla"><br><a href="https://www.cyberpuerta.mx/Computo-Hardware/Componentes/Fuentes-de-Poder-para-PC-s/" class="btn btn-link">FUENTES DE PODER</a></td>
+                    <td><img src="monitores.jpg" class="img-tabla"><br><a href="https://ddtech.mx/productos/monitores/monitores" class="btn btn-link">MONITORES</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <h2 class="section-title">EQUIPOS PREENSAMBLADOS</h2>
+        <div id="pcCarousel" class="carousel slide border shadow card-custom p-0 overflow-hidden" data-ride="carousel" style="max-width: 850px; margin: 0 auto;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="ensamblada1.png" class="d-block w-100" alt="Titan Alpha">
+                    <div class="carousel-caption d-none d-md-block" style="background: rgba(0,123,255,0.8); border-radius: 10px;">
+                        <h5>TITAN ALPHA</h5>
+                        <p>Potencia extrema para diseño y renderizado.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="ensamblada2.png" class="d-block w-100" alt="Blaze Entry">
+                    <div class="carousel-caption d-none d-md-block" style="background: rgba(0,123,255,0.8); border-radius: 10px;">
+                        <h5>BLAZE ENTRY</h5>
+                        <p>Optimizado para los últimos juegos en 4K.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="ensamblada3.png" class="d-block w-100" alt="Ghost Rider">
+                    <div class="carousel-caption d-none d-md-block" style="background: rgba(0,123,255,0.8); border-radius: 10px;">
+                        <h5>GHOST RIDER</h5>
+                        <p>Fiabilidad y rapidez para tu flujo de trabajo diario.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#pcCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#pcCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+        <h2 class="section-title">OFERTAS DEL MES</h2>
+        <div class="table-responsive mb-5">
+            <table class="table table-modern" style="width: 95%; margin: 0 auto;">
+                <tr>
+                    <td width="15%"><img src="monitoroferta1.jpg" class="img-oferta"></td>
+                    <td width="18%" class="text-left">
+                        <span class="badge badge-primary">MONITOR</span>
+                        <ul class="small mt-2">
+                            <li>Samsung 32" / 180hz</li>
+                            <li class="badge-price">$3,690</li>
+                        </ul>
+                    </td>
+                    <td width="15%"><img src="graficaoferta1.jpg" class="img-oferta"></td>
+                    <td width="18%" class="text-left">
+                        <span class="badge badge-primary">GRÁFICA</span>
+                        <ul class="small mt-2">
+                            <li>RTX 5060 Ti GIGABYTE</li>
+                            <li class="badge-price">$8,382</li>
+                        </ul>
+                    </td>
+                    <td width="15%"><img src="motherboardoferta1.jpg" class="img-oferta"></td>           
+                    <td width="18%" class="text-left">
+                        <span class="badge badge-primary">MOTHERBOARD</span>
+                        <ul class="small mt-2">
+                            <li>ROG STRIX B550-F WIFI</li>
+                            <li class="badge-price">$3,458</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="procesadoroferta1.jpg" class="img-oferta"></td>
+                    <td class="text-left">
+                        <span class="badge badge-primary">PROCESADOR</span>
+                        <ul class="small mt-2">
+                            <li>AMD RYZEN 5 AM5</li>
+                            <li class="badge-price">$4,285</li>
+                        </ul>
+                    </td>
+                    <td><img src="ramoferta1.jpg" class="img-oferta"></td>
+                    <td class="text-left">
+                        <span class="badge badge-primary">MEMORIA RAM</span>
+                        <ul class="small mt-2">
+                            <li>CORSAIR 32GB RGB</li>
+                            <li class="badge-price">$2,298</li>
+                        </ul>
+                    </td>
+                    <td><img src="gabineteoferta1.jpg" class="img-oferta"></td>
+                    <td class="text-left">
+                        <span class="badge badge-primary">GABINETE</span>
+                        <ul class="small mt-2">
+                            <li>Balam Rush Cristal</li>
+                            <li class="badge-price">$2,498</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SECCIÓN INTERACTIVA: CONFIGURADOR EXPRESS (NUEVA ADICIÓN)        -->
+        <!-- ================================================================= -->
+        <h2 class="section-title">¿NO SABES QUÉ COMPRAR? PRUEBA EL CONFIGURADOR</h2>
+        <div class="card card-custom text-left p-4 container" style="max-width: 850px; margin: 0 auto;">
+            <p class="text-center text-muted font-weight-bold">Selecciona tu objetivo principal y descubre tu setup ideal:</p>
+            
+            <div class="row text-center mb-4">
+                <div class="col-6 col-md-3">
+                    <div class="card p-3 game-card selected" onclick="seleccionarObjetivo(this, 'casual')">
+                        <div class="h2 text-primary"><i class="fas fa-gamepad"></i></div>
+                        <h6 class="font-weight-bold mb-0">Juegos Casuales</h6>
+                        <small class="text-muted">Minecraft, League of Legends</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card p-3 game-card" onclick="seleccionarObjetivo(this, 'competitivo')">
+                        <div class="h2 text-danger"><i class="fas fa-crosshairs"></i></div>
+                        <h6 class="font-weight-bold mb-0">Competitivo / AAA</h6>
+                        <small class="text-muted">Fortnite, Warzone, Cyberpunk</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mt-3 mt-md-0">
+                    <div class="card p-3 game-card" onclick="seleccionarObjetivo(this, 'streamer')">
+                        <div class="h2 text-purple" style="color: #6f42c1;"><i class="fas fa-headset"></i></div>
+                        <h6 class="font-weight-bold mb-0">Streamer / Creador</h6>
+                        <small class="text-muted">En vivo en Twitch y YouTube</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mt-3 mt-md-0">
+                    <div class="card p-3 game-card" onclick="seleccionarObjetivo(this, 'pesado')">
+                        <div class="h2 text-success"><i class="fas fa-cube"></i></div>
+                        <h6 class="font-weight-bold mb-0">Arquitectura / 3D</h6>
+                        <small class="text-muted">Renderizado masivo y VR</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="rangePresupuesto" class="font-weight-bold"><i class="fas fa-wallet text-primary"></i> Ajusta tu presupuesto aproximado:</label>
+                <input type="range" class="form-control-range" id="rangePresupuesto" min="8000" max="45000" step="1000" value="18000" oninput="actualizarPresupuestoTexto(this.value)">
+                <div class="text-right font-weight-bold text-primary mt-1" id="txtPresupuesto" style="font-size: 1.2rem;">$18,000 MXN</div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg font-weight-bold px-5" id="btnCalcular" onclick="calcularSetup()"><i class="fas fa-cog fa-spin mr-2"></i> RECOMENDAR MI PC</button>
+            </div>
+
+            <!-- Zona de Carga Animada -->
+            <div id="loadingSetup" class="text-center d-none my-4">
+                <div class="spinner-border text-primary" role="status"></div>
+                <p class="mt-2 text-muted font-italic">Buscando la combinación perfecta en el inventario...</p>
+            </div>
+
+            <!-- Resultado del Cálculo -->
+            <div id="resultadoSetup" class="mt-4 p-3 d-none bg-light border-primary border" style="border-radius: 10px; border-left-width: 5px !important;">
+                <h5 class="font-weight-bold text-primary"><i class="fas fa-desktop"></i> Setup Recomendado: <span id="resNombre" class="text-dark"></span></h5>
+                <hr>
+                <div class="row">
+                    <div class="col-md-7">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><strong><i class="fas fa-microchip text-muted"></i> Procesador:</strong> <span id="resCPU"></span></li>
+                            <li class="mb-2"><strong><i class="fas fa-bolt text-muted"></i> Gráfica:</strong> <span id="resGPU"></span></li>
+                            <li class="mb-2"><strong><i class="fas fa-memory text-muted"></i> Memoria:</strong> <span id="resRAM"></span></li>
+                            <li class="mb-2"><strong><i class="fas fa-tachometer-alt text-muted"></i> Rendimiento Estimado:</strong> <span id="resPerf"></span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 text-center bg-white p-3 border rounded d-flex flex-column justify-content-center">
+                        <span class="small text-muted font-weight-bold">PRECIO ESTIMADO ELEMENT PC</span>
+                        <span class="h3 font-weight-bold text-danger m-0" id="resPrecio"></span>
+                        <a href="sanchezpag5.html" class="btn btn-success btn-sm mt-2 font-weight-bold"><i class="fas fa-shopping-cart"></i> Apartar este equipo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================================================================= -->
+
+    </div>
+    <br>
+
+    <div class="container mt-5">
+            <div class="table-responsive">
+                <table class="table table-bordered text-center shadow-sm bg-white">
+                    <tr class="bg-primary">
+                        <td><a href="index.html" class="text-white font-weight-bold">INICIO</a></td>
+                        <td><a href="sanchezpag1.html" class="text-white font-weight-bold">ARTÍCULOS</a></td>
+                        <td><a href="sanchezpag2.html" class="text-white font-weight-bold">PREENSAMBLADAS</a></td>
+                        <td><a href="sanchezpag3.html" class="text-white font-weight-bold">TUTORIALES</a></td>
+                        <td><a href="sanchezpag4.html" class="text-white font-weight-bold">FAQ</a></td>
+                        <td><a href="sanchezpag5.html" class="text-white font-weight-bold">PEDIDOS</a></td>
+                        <td><a href="practica4.html" class="text-white font-weight-bold">biografia</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-primary">ELEMENT PC</h5>
+                    <p class="small text-muted">Líderes en tecnología y ensamble de computadoras de alto rendimiento.</p>
+                </div> 
+                <div class="col-md-4 mb-3">
+                    <h5>SÍGUENOS</h5>
+                    <div class="h3">
+                      <a href="https://www.facebook.com/?locale=es_LA" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                      <a href="https://www.instagram.com/?hl=es" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                      <a href="https://discord.com/" class="text-white mx-2"><i class="fab fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>UBICACIÓN</h5>
+                    <p class="small text-muted"><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123, Baja California.</p>
+                    <p class="small text-muted"><i class="fas fa-envelope"></i> contacto@elementpc.com</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="mb-0 small">&copy; 2026 Sanchez - Element PC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Lógica JavaScript para la sección interactiva -->
+    <script>
+        let objetivoSeleccionado = 'casual';
+
+        function seleccionarObjetivo(elemento, tipo) {
+            document.querySelectorAll('.game-card').forEach(card => card.classList.remove('selected'));
+            elemento.classList.add('selected');
+            objetivoSeleccionado = tipo;
+        }
+
+        function actualizarPresupuestoTexto(valor) {
+            document.getElementById('txtPresupuesto').innerText = '$' + Number(valor).toLocaleString('es-MX') + ' MXN';
+        }
+
+        function calcularSetup() {
+            const presupuesto = parseInt(document.getElementById('rangePresupuesto').value);
+            const loading = document.getElementById('loadingSetup');
+            const resultado = document.getElementById('resultadoSetup');
+            
+            loading.classList.remove('d-none');
+            resultado.classList.add('d-none');
+
+            // Pequeña simulación de carga interactiva
+            setTimeout(() => {
+                loading.classList.add('d-none');
+                resultado.classList.remove('d-none');
+
+                let nombre = "Element Custom Setup";
+                let cpu = "AMD Ryzen 5 4500";
+                let gpu = "Radeon Vega Graphics Integrados";
+                let ram = "8GB DDR4 Kingston Fury";
+                let rendimiento = "60 FPS estables en Calidad Media/Baja (1080p)";
+                let precioFinal = presupuesto;
+
+                if (objetivoSeleccionado === 'casual') {
+                    if (presupuesto < 15000) {
+                        nombre = "GHOST RIDER LITE";
+                        cpu = "AMD Ryzen 5 5600G";
+                        gpu = "Gráficos Vega 7 Integrados";
+                        ram = "16GB DDR4 Corsair Vengeance";
+                        rendimiento = "Ideales para League of Legends, Valorant y tareas escolares.";
+                    } else {
+                        nombre = "BLAZE CASUAL PRO";
+                        cpu = "Intel Core i5-12400F";
+                        gpu = "NVIDIA GTX 1650 4GB";
+                        ram = "16GB DDR4 3200MHz";
+                        rendimiento = "Minecraft con Shaders y Fortnite a +120 FPS sin caídas.";
+                    }
+                } else if (objetivoSeleccionado === 'competitivo') {
+                    if (presupuesto < 20000) {
+                        nombre = "BLAZE ENTRY TOURNAMENT";
+                        cpu = "AMD Ryzen 5 5600X";
+                        gpu = "NVIDIA RTX 3050 8GB";
+                        ram = "16GB DDR4 RGB Ocelot";
+                        rendimiento = "Juegos competitivos en Ultra a más de 144 FPS estables.";
+                    } else {
+                        nombre = "TITAN ALPHA TOURNAMENT";
+                        cpu = "AMD Ryzen 7 5700X";
+                        gpu = "NVIDIA RTX 4060 Ti 8GB";
+                        ram = "32GB DDR4 Corsair RGB";
+                        rendimiento = "Apta para Cyberpunk en Ultra y Ray Tracing activo.";
+                    }
+                } else if (objetivoSeleccionado === 'streamer') {
+                    if (presupuesto < 25000) {
+                        nombre = "STREAMER STARTER KIT";
+                        cpu = "Intel Core i7-12700F";
+                        gpu = "NVIDIA RTX 4060 8GB (Codificador NVENC)";
+                        ram = "32GB DDR4 HyperX Beast";
+                        rendimiento = "Transmisión simultánea a 1080p 60fps sin perder rendimiento.";
+                    } else {
+                        nombre = "BROADCAST TITAN PRO";
+                        cpu = "AMD Ryzen 9 7900X (AM5)";
+                        gpu = "NVIDIA RTX 4070 Super 12GB";
+                        ram = "32GB DDR5 Kingston Fury RGB";
+                        rendimiento = "Streaming profesional en 4K mientras juegas de manera nativa.";
+                    }
+                } else if (objetivoSeleccionado === 'pesado') {
+                    if (presupuesto < 30000) {
+                        nombre = "ELEMENT ARCH CREATOR";
+                        cpu = "Intel Core i7-13700K";
+                        gpu = "NVIDIA RTX 4060 Ti 16GB VRAM";
+                        ram = "32GB DDR5 Alta Velocidad";
+                        rendimiento = "Renderizado de renders e imágenes pesadas con gran cantidad de polígonos.";
+                    } else {
+                        nombre = "ELEMENT WORKSTATION SUPREME";
+                        cpu = "AMD Ryzen 9 7950X / Liquid AIO";
+                        gpu = "NVIDIA RTX 4080 Super 16GB";
+                        ram = "64GB DDR5 G.Skill Trident Z";
+                        rendimiento = "Flujo masivo de Render 3D, Blender, AutoCAD y entornos de VR Extremos.";
+                    }
+                }
+
+                document.getElementById('resNombre').innerText = nombre;
+                document.getElementById('resCPU').innerText = cpu;
+                document.getElementById('resGPU').innerText = gpu;
+                document.getElementById('resRAM').innerText = ram;
+                document.getElementById('resPerf').innerText = rendimiento;
+                document.getElementById('resPrecio').innerText = '$' + Number(precioFinal).toLocaleString('es-MX') + ' MXN';
+            }, 1200);
+        }
+    </script>
+</body>
+</html>

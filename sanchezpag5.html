@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANCHEZPAG5 - PEDIDOS ELEMENT PC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #f4f7f6;
+            background-image: radial-gradient(#007bff1a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .formulario-container, .juego-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 5px solid #007bff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+
+        .juego-container {
+            border-left-color: #28a745; /* Verde para la zona de juegos */
+        }
+
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .btn-enviar {
+            transition: all 0.3s ease;
+        }
+
+        .btn-enviar:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+        }
+
+        /* --- ESTILOS DEL BUSCAMINAS --- */
+        #tablero {
+            display: grid;
+            grid-template-columns: repeat(8, 40px);
+            grid-gap: 4px;
+            justify-content: center;
+            margin: 20px auto;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 8px;
+            width: fit-content;
+        }
+
+        .celda {
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            user-select: none;
+            transition: background-color 0.2s;
+            color: white;
+        }
+
+        .celda:hover {
+            background-color: #0056b3;
+        }
+
+        .celda.revelada {
+            background-color: #dae0e5;
+            color: #212529;
+            cursor: default;
+        }
+
+        .celda.mina {
+            background-color: #dc3545 !important;
+            color: white;
+        }
+
+        .celda.bandera {
+            background-color: #ffc107;
+            color: #212529;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">INICIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenido">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag1.html">ARTICULOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag2.html">PREENSAMBLADAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag3.html">TUTORIALES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag4.html">FAQ</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="sanchezpag5.html">PEDIDOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practica4.html">BIOGRAFIA</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <img src="BANNERPC.jpeg" width="100%" height="auto" alt="Banner Element PC">
+
+    <div class="container">
+        <div class="text-center section-title">
+            <h1 class="display-4 font-weight-bold" style="color:red;">PEDIDOS</h1>
+            <h2 class="text-muted">AGREGUE SUS DATOS DE ENVÍO</h2>
+        </div>
+
+        <!-- Formulario de Pedidos -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10 formulario-container">
+                <p class="text-muted mb-4"><i class="fas fa-info-circle"></i> Complete el formulario para procesar su compra de hardware de forma segura.</p>
+                
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label><i class="fas fa-envelope"></i> Correo</label>
+                            <input type="email" class="form-control" placeholder="ejemplo@correo.com">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label><i class="fas fa-lock"></i> Contraseña</label>
+                            <input type="password" class="form-control" placeholder="Cree una clave">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Dirección</label>
+                        <input type="text" class="form-control" placeholder="Calle y número">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-landmark"></i> Colonia o Referencias</label>
+                        <input type="text" class="form-control" placeholder="Ej: Edificio azul, frente a parque">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Ciudad</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Estado</label>
+                            <select class="form-control">
+                                <option selected>Escoja...</option>
+                                <option>Ciudad de México</option>
+                                <option>Jalisco</option>
+                                <option>Nuevo León</option>
+                                <option>Baja California</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label>Código Postal</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group py-3">
+                        <label><strong><i class="fas fa-credit-card"></i> Método de Pago:</strong></label><br>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="pago1" name="metodoPago" class="custom-control-input">
+                            <label class="custom-control-label" for="pago1">Tarjeta (Débito/Crédito)</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="pago2" name="metodoPago" class="custom-control-input">
+                            <label class="custom-control-label" for="pago2">Transferencia / OXXO</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Acepto los términos de compra y políticas de privacidad
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-block btn-enviar mt-3">
+                        <i class="fas fa-paper-plane"></i> ENVIAR DATOS DE PEDIDO
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- SECCIÓN NUEVA: MINIJUEGO BUSCAMINAS -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10 juego-container text-center">
+                <h3 class="font-weight-bold text-success"><i class="fas fa-gamepad"></i> ¿Esperando tu pedido?</h3>
+                <p class="text-muted">¡Juega un Buscaminas rápido mientras procesamos tu solicitud!</p>
+                
+                <div class="mb-3">
+                    <span class="badge badge-info p-2 font-weight-bold" id="info-minas">Minas: 10</span>
+                    <button class="btn btn-outline-success btn-sm ml-2" onclick="reiniciarJuego()"><i class="fas fa-sync-alt"></i> Reiniciar</button>
+                </div>
+
+                <!-- Contenedor del Tablero -->
+                <div id="tablero"></div>
+                
+                <p class="small text-muted mt-2"><i class="fas fa-mouse-pointer"></i> <strong>Click Izquierdo:</strong> Revelar | <strong>Click Derecho (o mantener presionado):</strong> Poner Bandera <i class="fas fa-flag text-warning"></i></p>
+                <div id="mensaje-juego" class="mt-3 font-weight-bold h5"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mb-5">
+        <div class="table-responsive">
+            <table class="table table-bordered shadow-sm bg-white">
+                <tr class="bg-primary text-white">
+                    <td><a href="index.html" class="text-white">INICIO</a></td>
+                    <td><a href="sanchezpag1.html" class="text-white">ARTICULOS</a></td>
+                    <td><a href="sanchezpag2.html" class="text-white">PREENSAMBLADAS</a></td>
+                    <td><a href="sanchezpag3.html" class="text-white">TUTORIALES</a></td>
+                    <td><a href="sanchezpag4.html" class="text-white">FAQ</a></td>
+                    <td><a href="sanchezpag5.html" class="text-white">PEDIDOS</a></td>
+                    <td><a href="practica4.html" class="text-white font-weight-bold">biografia</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-3 text-md-left">
+                    <h5 class="text-primary font-weight-bold">ELEMENT PC</h5>
+                    <p class="small text-muted">Tu mejor aliado en tecnología. Envíos 100% seguros a toda la república.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>SÍGUENOS</h5>
+                    <div class="h3">
+                      <a href="https://www.facebook.com/?locale=es_LA" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                      <a href="https://www.instagram.com/?hl=es" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                      <a href="https://discord.com/" class="text-white mx-2"><i class="fab fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 text-md-right">
+                  <h5>UBICACIÓN</h5>
+                  <p class="small text-muted">Av. Tecnología #123,Baja California.</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="mb-0 small text-muted">&copy; 2026 Sanchez - Element PC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- LÓGICA DEL BUSCAMINAS -->
+    <script>
+        const FILAS = 8;
+        const COLUMNAS = 8;
+        const MINAS = 10;
+        let tablero = [];
+        let juegoTerminado = false;
+
+        function iniciarJuego() {
+            const contenedorTablero = document.getElementById('tablero');
+            contenedorTablero.innerHTML = '';
+            document.getElementById('mensaje-juego').innerHTML = '';
+            document.getElementById('info-minas').innerText = `Minas: ${MINAS}`;
+            juegoTerminado = false;
+            tablero = [];
+
+            // 1. Crear matriz vacía
+            for (let f = 0; f < FILAS; f++) {
+                tablero[f] = [];
+                for (let c = 0; c < COLUMNAS; c++) {
+                    tablero[f][c] = {
+                        fila: f,
+                        columna: c,
+                        esMina: false,
+                        revelada: false,
+                        bandera: false,
+                        minasAlrededor: 0
+                    };
+                }
+            }
+
+            // 2. Colocar minas aleatoriamente
+            let minasColocadas = 0;
+            while (minasColocadas < MINAS) {
+                let f = Math.floor(Math.random() * FILAS);
+                let c = Math.floor(Math.random() * COLUMNAS);
+                if (!tablero[f][c].esMina) {
+                    tablero[f][c].esMina = true;
+                    minasColocadas++;
+                }
+            }
+
+            // 3. Calcular números de minas alrededor
+            for (let f = 0; f < FILAS; f++) {
+                for (let c = 0; c < COLUMNAS; c++) {
+                    if (!tablero[f][c].esMina) {
+                        tablero[f][c].minasAlrededor = contarMinasAlrededor(f, c);
+                    }
+                }
+            }
+
+            // 4. Renderizar el tablero en el HTML
+            for (let f = 0; f < FILAS; f++) {
+                for (let c = 0; c < COLUMNAS; c++) {
+                    const celdaElemento = document.createElement('div');
+                    celdaElemento.classList.add('celda');
+                    celdaElemento.dataset.fila = f;
+                    celdaElemento.dataset.columna = c;
+
+                    // Evento click normal (Revelar)
+                    celdaElemento.addEventListener('click', (e) => revelarCelda(f, c));
+                    
+                    // Evento click derecho (Bandera)
+                    celdaElemento.addEventListener('contextmenu', (e) => {
+                        e.preventDefault();
+                        ponerBandera(f, c);
+                    });
+
+                    contenedorTablero.appendChild(celdaElemento);
+                }
+            }
+        }
+
+        function contarMinasAlrededor(fila, columna) {
+            let conteo = 0;
+            for (let f = -1; f <= 1; f++) {
+                for (let c = -1; c <= 1; c++) {
+                    let nuevaF = fila + f;
+                    let nuevaC = columna + c;
+                    if (nuevaF >= 0 && nuevaF < FILAS && nuevaC >= 0 && nuevaC < COLUMNAS) {
+                        if (tablero[nuevaF][nuevaC].esMina) conteo++;
+                    }
+                }
+            }
+            return conteo;
+        }
+
+        function revelarCelda(f, c) {
+            if (juegoTerminado || tablero[f][c].revelada || tablero[f][c].bandera) return;
+
+            const celdaElemento = document.querySelector(`[data-fila='${f}'][data-columna='${c}']`);
+            tablero[f][c].revelada = true;
+
+            if (tablero[f][c].esMina) {
+                celdaElemento.classList.add('mina');
+                celdaElemento.innerHTML = '<i class="fas fa-bomb"></i>';
+                terminarJuego(false);
+                return;
+            }
+
+            celdaElemento.classList.add('revelada');
+            if (tablero[f][c].minasAlrededor > 0) {
+                celdaElemento.innerText = tablero[f][c].minasAlrededor;
+            } else {
+                // Revelar vecinos automáticamente si es un espacio vacío (0)
+                for (let i = -1; i <= 1; i++) {
+                    for (let j = -1; j <= 1; j++) {
+                        let nuevaF = f + i;
+                        let nuevaC = c + j;
+                        if (nuevaF >= 0 && nuevaF < FILAS && nuevaC >= 0 && nuevaC < COLUMNAS) {
+                            revelarCelda(nuevaF, nuevaC);
+                        }
+                    }
+                }
+            }
+            verificarVictoria();
+        }
+
+        function ponerBandera(f, c) {
+            if (juegoTerminado || tablero[f][c].revelada) return;
+
+            const celdaElemento = document.querySelector(`[data-fila='${f}'][data-columna='${c}']`);
+            tablero[f][c].bandera = !tablero[f][c].bandera;
+
+            if (tablero[f][c].bandera) {
+                celdaElemento.classList.add('bandera');
+                celdaElemento.innerHTML = '<i class="fas fa-flag"></i>';
+            } else {
+                celdaElemento.classList.remove('bandera');
+                celdaElemento.innerHTML = '';
+            }
+        }
+
+        function terminarJuego(ganaste) {
+            juegoTerminado = true;
+            const mensaje = document.getElementById('mensaje-juego');
+            
+            if (ganaste) {
+                mensaje.innerHTML = '<span class="text-success"><i class="fas fa-trophy"></i> ¡Ganaste! ¡Tu pedido está en camino con buena suerte!</span>';
+            } else {
+                mensaje.innerHTML = '<span class="text-danger"><i class="fas fa-skull-crossbones"></i> ¡Boom! Inténtalo de nuevo.</span>';
+                // Mostrar todas las minas
+                for (let f = 0; f < FILAS; f++) {
+                    for (let c = 0; c < COLUMNAS; c++) {
+                        if (tablero[f][c].esMina) {
+                            const celda = document.querySelector(`[data-fila='${f}'][data-columna='${c}']`);
+                            celda.classList.add('mina');
+                            celda.innerHTML = '<i class="fas fa-bomb"></i>';
+                        }
+                    }
+                }
+            }
+        }
+
+        function verificarVictoria() {
+            let celdasPorRevelar = 0;
+            for (let f = 0; f < FILAS; f++) {
+                for (let c = 0; c < COLUMNAS; c++) {
+                    if (!tablero[f][c].esMina && !tablero[f][c].revelada) {
+                        celdasPorRevelar++;
+                    }
+                }
+            }
+            if (celdasPorRevelar === 0) {
+                terminarJuego(true);
+            }
+        }
+
+        function reiniciarJuego() {
+            iniciarJuego();
+        }
+
+        // Arrancar el juego al cargar la página
+        window.onload = iniciarJuego;
+    </script>
+</body>
+</html>

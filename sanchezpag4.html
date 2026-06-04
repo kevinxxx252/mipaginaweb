@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANCHEZPAG4 - FAQ ELEMENT PC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #f4f7f6;
+            background-image: radial-gradient(#007bff1a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .card-faq {
+            border: none;
+            border-left: 5px solid #007bff;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card-faq:hover {
+            transform: scale(1.01);
+        }
+
+        .btn-pregunta {
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none !important;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            padding: 15px;
+        }
+
+        .faq-container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .cta-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px dashed #007bff;
+            margin-top: 40px;
+        }
+
+        /* --- ESTILOS DE LA SECCIÓN PING PONG --- */
+        .pingpong-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid #28a745;
+            margin-top: 40px;
+        }
+
+        #pongCanvas {
+            background-color: #111;
+            display: block;
+            margin: 15px auto;
+            border-radius: 8px;
+            max-width: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .controles-info {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">INICIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenido">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag1.html">ARTICULOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag2.html">PREENSAMBLADAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag3.html">TUTORIALES</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="sanchezpag4.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag5.html">PEDIDOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practica4.html">BIOGRAFIA</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <img src="BANNERPC.jpeg" width="100%" height="auto" alt="Banner PC">
+
+    <div class="faq-container">
+        <div class="text-center section-title">
+            <h1 class="display-4 font-weight-bold">FAQ</h1>
+            <h2 class="text-muted">PREGUNTAS FRECUENTES</h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+            
+            <div class="card card-faq">
+                <div class="card-header bg-white">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-pregunta" type="button" data-toggle="collapse" data-target="#c1">
+                            <i class="fas fa-question-circle mr-2"></i> ¿QUÉ ES ELEMENT PC?
+                        </button>
+                    </h2>
+                </div>
+                <div id="c1" class="collapse show" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        ELEMENT PC es una página web dedicada a la venta de componentes para computadoras, así como a la venta de computadoras armadas, monitores y periféricos de última generación.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header bg-white">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-pregunta collapsed" type="button" data-toggle="collapse" data-target="#c2">
+                            <i class="fas fa-microchip mr-2"></i> ¿QUÉ COMPONENTES VENDEN?
+                        </button>
+                    </h2>
+                </div>
+                <div id="c2" class="collapse" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Vendemos procesadores (Intel/AMD), placas base, memorias RAM DDR4/DDR5, tarjetas de video RTX/Radeon, discos SSD M.2, fuentes de poder certificadas y gabinetes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header bg-white">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-pregunta collapsed" type="button" data-toggle="collapse" data-target="#c3">
+                            <i class="fas fa-wallet mr-2"></i> ¿QUÉ MÉTODOS DE PAGO ACEPTAN?
+                        </button>
+                    </h2>
+                </div>
+                <div id="c3" class="collapse" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Aceptamos tarjetas de crédito/débito (Visa, Mastercard, AMEX), transferencias SPEI, depósitos en OXXO y PayPal con meses sin intereses.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header bg-white">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-pregunta collapsed" type="button" data-toggle="collapse" data-target="#c11">
+                            <i class="fas fa-tools mr-2"></i> ¿EL ARMADO TIENE COSTO EXTRA?
+                        </button>
+                    </h2>
+                </div>
+                <div id="c11" class="collapse" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Si compras todos los componentes con nosotros, el armado y la instalación básica de drivers es **totalmente gratis**.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header bg-white">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-pregunta collapsed" type="button" data-toggle="collapse" data-target="#c12">
+                            <i class="fas fa-box-open mr-2"></i> ¿PUEDO RECOGER MI PEDIDO EN TIENDA?
+                        </button>
+                    </h2>
+                </div>
+                <div id="c12" class="collapse" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Sí, contamos con punto de entrega físico. Solo debes seleccionar "Recoger en tienda" al momento de finalizar tu pedido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header bg-white">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-pregunta collapsed" type="button" data-toggle="collapse" data-target="#c4">
+                            <i class="fas fa-shield-alt mr-2"></i> ¿LAS COMPUTADORAS TIENEN GARANTÍA?
+                        </button>
+                    </h2>
+                </div>
+                <div id="c4" class="collapse" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Sí, todas nuestras computadoras armadas cuentan con 1 año de garantía directa y cada componente conserva su garantía individual con el fabricante.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header bg-white">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-pregunta collapsed" type="button" data-toggle="collapse" data-target="#c13">
+                            <i class="fas fa-file-invoice-dollar mr-2"></i> ¿EMITEN FACTURA FISCAL?
+                        </button>
+                    </h2>
+                </div>
+                <div id="c13" class="collapse" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Claro que sí. Todos nuestros precios ya incluyen IVA y puedes solicitar tu factura al momento de tu compra o hasta 3 días después.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header bg-white">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-pregunta collapsed" type="button" data-toggle="collapse" data-target="#c9">
+                            <i class="fas fa-clock mr-2"></i> ¿CUÁNTO TARDA EL ENVÍO?
+                        </button>
+                    </h2>
+                </div>
+                <div id="c9" class="collapse" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        El tiempo de entrega estándar es de 3 a 5 días hábiles. En zonas extendidas puede tardar hasta 7 días hábiles.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN: MINIJUEGO PING PONG MODOS MEJORADOS -->
+        <div class="pingpong-box text-center">
+            <h3><i class="fas fa-gamepad text-success"></i> Zona Arcade: Ping Pong</h3>
+            <p class="text-muted mb-3">¡El primero en llegar a **10 puntos** gana la partida!</p>
+            
+            <div class="btn-group mb-3" role="group">
+                <button id="btnModo1" class="btn btn-primary active font-weight-bold" onclick="cambiarModo('1P')">
+                    <i class="fas fa-user"></i> 1 Jugador (vs IA)
+                </button>
+                <button id="btnModo2" class="btn btn-outline-primary font-weight-bold" onclick="cambiarModo('2P')">
+                    <i class="fas fa-users"></i> 2 Jugadores (Local)
+                </button>
+            </div>
+
+            <div class="mb-3">
+                <button id="btnIniciarPong" class="btn btn-success btn-sm font-weight-bold px-4">
+                    <i class="fas fa-play mr-1"></i> Iniciar / Pausar
+                </button>
+                <button class="btn btn-secondary btn-sm ml-2" onclick="reiniciarMarcador()"><i class="fas fa-undo"></i> Reiniciar Partida</button>
+            </div>
+
+            <canvas id="pongCanvas" width="700" height="400"></canvas>
+            
+            <!-- Controles dinámicos informativos -->
+            <div id="instruccionesControles" class="controles-info font-italic">
+                <i class="fas fa-keyboard"></i> <strong>Controles (1 Jugador):</strong> Mueve tu paleta izquierda con las teclas <strong>W / S</strong> o <strong>Flechas &uparrow; &downarrow;</strong>.
+            </div>
+        </div>
+
+        <!-- Caja de Soporte Final -->
+        <div class="cta-box text-center shadow-sm">
+            <h3><i class="fas fa-headset text-primary"></i> ¿Aún tienes dudas?</h3>
+            <p>Si tu pregunta no aparece aquí, contáctanos y un experto te atenderá.</p>
+            <a href="sanchezpag5.html" class="btn btn-primary btn-lg px-5">Contactar Soporte</a>
+        </div>
+    </div>
+
+    <div class="container text-center mb-5">
+        <div class="table-responsive">
+            <table class="table table-bordered shadow-sm bg-white">
+                <tr class="bg-primary text-white">
+                    <td><a href="index.html" class="text-white">INICIO</a></td>
+                    <td><a href="sanchezpag1.html" class="text-white">ARTICULOS</a></td>
+                    <td><a href="sanchezpag2.html" class="text-white">PREENSAMBLADAS</a></td>
+                    <td><a href="sanchezpag3.html" class="text-white">TUTORIALES</a></td>
+                    <td><a href="sanchezpag4.html" class="text-white">FAQ</a></td>
+                    <td><a href="sanchezpag5.html" class="text-white">PEDIDOS</a></td>
+                    <td><a href="practica4.html" class="text-white font-weight-bold">biografia</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-primary">ELEMENT PC</h5>
+                    <p class="small text-muted">Líderes en tecnología y ensamble de computadoras de alto rendimiento.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>REDES SOCIALES</h5>
+                    <a href="https://www.facebook.com/?locale=es_LA" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="https://www.instagram.com/?hl=es" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://discord.com/" class="text-white mx-2"><i class="fab fa-discord fa-lg"></i></a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>UBICACIÓN</h5>
+                    <p class="small text-muted">Av. Tecnología #123,Baja California.</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="mb-0">&copy; 2026 Sanchez - Element PC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- LÓGICA DEL JUEGO PING PONG (MULTIPLAYER E IA CON LÍMITE DE PUNTOS) -->
+    <script>
+        const canvas = document.getElementById("pongCanvas");
+        const ctx = canvas.getContext("2d");
+        const btnIniciar = document.getElementById("btnIniciarPong");
+        const instrucciones = document.getElementById("instruccionesControles");
+
+        let juegoActivo = false;
+        let loopJuego;
+        let modoActual = "1P"; 
+        let finDePartida = false;
+        const LIMITE_PUNTOS = 10;
+
+        const paletaAncho = 10;
+        const paletaAlto = 80;
+        
+        const jugador1 = {
+            x: 15,
+            y: canvas.height / 2 - paletaAlto / 2,
+            ancho: paletaAncho,
+            alto: paletaAlto,
+            color: "#007bff",
+            puntaje: 0
+        };
+
+        const jugador2 = {
+            x: canvas.width - 15 - paletaAncho,
+            y: canvas.height / 2 - paletaAlto / 2,
+            ancho: paletaAncho,
+            alto: paletaAlto,
+            color: "#dc3545",
+            puntaje: 0
+        };
+
+        const pelota = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            radio: 8,
+            velocidadX: 4,
+            velocidadY: 4,
+            velocidadBase: 4,
+            color: "#28a745"
+        };
+
+        let teclas = {
+            w: false, s: false,
+            ArrowUp: false, ArrowDown: false
+        };
+
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "w" || e.key === "W") teclas.w = true;
+            if (e.key === "s" || e.key === "S") teclas.s = true;
+            if (e.key === "ArrowUp") teclas.ArrowUp = true;
+            if (e.key === "ArrowDown") teclas.ArrowDown = true;
+            
+            if(["Space", "ArrowUp", "ArrowDown", "KeyW", "KeyS"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        });
+
+        window.addEventListener("keyup", (e) => {
+            if (e.key === "w" || e.key === "W") teclas.w = false;
+            if (e.key === "s" || e.key === "S") teclas.s = false;
+            if (e.key === "ArrowUp") teclas.ArrowUp = false;
+            if (e.key === "ArrowDown") teclas.ArrowDown = false;
+        });
+
+        function cambiarModo(modo) {
+            modoActual = modo;
+            if(modo === "1P") {
+                document.getElementById("btnModo1").classList.add("active", "btn-primary");
+                document.getElementById("btnModo1").classList.remove("btn-outline-primary");
+                document.getElementById("btnModo2").classList.remove("active", "btn-primary");
+                document.getElementById("btnModo2").classList.add("btn-outline-primary");
+                instrucciones.innerHTML = `<i class="fas fa-keyboard"></i> <strong>Controles (1 Jugador):</strong> Mueve tu paleta izquierda con las teclas <strong>W / S</strong> o <strong>Flechas &uparrow; &downarrow;</strong>.`;
+            } else {
+                document.getElementById("btnModo2").classList.add("active", "btn-primary");
+                document.getElementById("btnModo2").classList.remove("btn-outline-primary");
+                document.getElementById("btnModo1").classList.remove("active", "btn-primary");
+                document.getElementById("btnModo1").classList.add("btn-outline-primary");
+                instrucciones.innerHTML = `<i class="fas fa-keyboard"></i> <strong>Controles (2 Jugadores):</strong> <span class="text-primary">J1 (Izquierda): <strong>W / S</strong></span> | <span class="text-danger">J2 (Derecha): <strong>Flechas &uparrow; &downarrow;</strong></span>`;
+            }
+            reiniciarMarcador();
+        }
+
+        function dibujarRect(x, y, w, h, color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, w, h);
+        }
+
+        function dibujarCirculo(x, y, r, color) {
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2, false);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        function dibujarTablero() {
+            dibujarRect(0, 0, canvas.width, canvas.height, "#111");
+
+            // Red de enmedio
+            for (let i = 0; i <= canvas.height; i += 15) {
+                dibujarRect(canvas.width / 2 - 1, i, 2, 10, "#444");
+            }
+
+            // Marcadores
+            ctx.fillStyle = "#fff";
+            ctx.font = "bold 35px Roboto, sans-serif";
+            ctx.fillText(jugador1.puntaje, canvas.width / 4, 50);
+            ctx.fillText(jugador2.puntaje, (3 * canvas.width) / 4, 50);
+
+            // Elementos de juego
+            dibujarRect(jugador1.x, jugador1.y, jugador1.ancho, jugador1.alto, jugador1.color);
+            dibujarRect(jugador2.x, jugador2.y, jugador2.ancho, jugador2.alto, jugador2.color);
+            
+            // Solo dibuja la pelota si la partida está activa
+            if (!finDePartida) {
+                dibujarCirculo(pelota.x, pelota.y, pelota.radio, pelota.color);
+            } else {
+                // Pantalla de Ganador
+                ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.fillStyle = "#ffc107"; // Dorado de victoria
+                ctx.font = "bold 40px Roboto, sans-serif";
+                ctx.textAlign = "center";
+                
+                let textoGanador = "";
+                if (modoActual === "1P") {
+                    textoGanador = (jugador1.puntaje >= LIMITE_PUNTOS) ? "¡HAS GANADO TU!" : "¡HA GANADO LA IA!";
+                } else {
+                    textoGanador = (jugador1.puntaje >= LIMITE_PUNTOS) ? "¡GANADOR: JUGADOR 1!" : "¡GANADOR: JUGADOR 2!";
+                }
+
+                ctx.fillText(textoGanador, canvas.width / 2, canvas.height / 2 - 10);
+                
+                ctx.fillStyle = "#fff";
+                ctx.font = "20px Roboto, sans-serif";
+                ctx.fillText("Presiona 'Reiniciar Partida' para volver a jugar", canvas.width / 2, canvas.height / 2 + 40);
+                ctx.textAlign = "start"; // Resetear alineación
+            }
+        }
+
+        function resetPelota() {
+            pelota.x = canvas.width / 2;
+            pelota.y = canvas.height / 2;
+            pelota.velocidadX = -pelota.velocidadX;
+            pelota.velocidadY = (Math.random() > 0.5 ? 1 : -1) * pelota.velocidadBase;
+        }
+
+        function reiniciarMarcador() {
+            finDePartida = false;
+            jugador1.puntaje = 0;
+            jugador2.puntaje = 0;
+            jugador1.y = canvas.height / 2 - paletaAlto / 2;
+            jugador2.y = canvas.height / 2 - paletaAlto / 2;
+            resetPelota();
+            if(!juegoActivo) {
+                dibujarTablero();
+            }
+        }
+
+        function colision(b, p) {
+            p.top = p.y;
+            p.bottom = p.y + p.alto;
+            p.left = p.x;
+            p.right = p.x + p.ancho;
+
+            b.top = b.y - b.radio;
+            b.bottom = b.y + b.radio;
+            b.left = b.x - b.radio;
+            b.right = b.x + b.radio;
+
+            return b.right > p.left && b.top < p.bottom && b.left < p.right && b.bottom > p.top;
+        }
+
+        function actualizar() {
+            if (finDePartida) return;
+
+            // Movimiento Jugador 1
+            if ((teclas.w || (modoActual === "1P" && teclas.ArrowUp)) && jugador1.y > 0) {
+                jugador1.y -= 6;
+            }
+            if ((teclas.s || (modoActual === "1P" && teclas.ArrowDown)) && jugador1.y < canvas.height - jugador1.alto) {
+                jugador1.y += 6;
+            }
+
+            // Movimiento Jugador 2 / IA
+            if (modoActual === "1P") {
+                let centroIA = jugador2.y + jugador2.alto / 2;
+                if (centroIA < pelota.y - 15 && jugador2.y < canvas.height - jugador2.alto) {
+                    jugador2.y += 4.5;
+                } else if (centroIA > pelota.y + 15 && jugador2.y > 0) {
+                    jugador2.y -= 4.5;
+                }
+            } else {
+                if (teclas.ArrowUp && jugador2.y > 0) {
+                    jugador2.y -= 6;
+                }
+                if (teclas.ArrowDown && jugador2.y < canvas.height - jugador2.alto) {
+                    jugador2.y += 6;
+                }
+            }
+
+            // Pelota
+            pelota.x += pelota.velocidadX;
+            pelota.y += pelota.velocidadY;
+
+            if (pelota.y - pelota.radio < 0 || pelota.y + pelota.radio > canvas.height) {
+                pelota.velocidadY = -pelota.velocidadY;
+            }
+
+            let paletaObjetivo = (pelota.x < canvas.width / 2) ? jugador1 : jugador2;
+
+            if (colision(pelota, paletaObjetivo)) {
+                let puntoChoque = (pelota.y - (paletaObjetivo.y + paletaObjetivo.alto / 2));
+                puntoChoque = puntoChoque / (paletaObjetivo.alto / 2);
+
+                let anguloRad = (Math.PI / 4) * puntoChoque;
+                let direccion = (pelota.x < canvas.width / 2) ? 1 : -1;
+
+                let velocidadActual = Math.hypot(pelota.velocidadX, pelota.velocidadY) + 0.4;
+                pelota.velocidadX = direccion * velocidadActual * Math.cos(anguloRad);
+                pelota.velocidadY = velocidadActual * Math.sin(anguloRad);
+            }
+
+            // Anotación y comprobación de límite (10 puntos)
+            if (pelota.x - pelota.radio < 0) {
+                jugador2.puntaje++;
+                if (jugador2.puntaje >= LIMITE_PUNTOS) {
+                    finDePartida = true;
+                    juegoActivo = false;
+                    clearInterval(loopJuego);
+                } else {
+                    resetPelota();
+                }
+            } else if (pelota.x + pelota.radio > canvas.width) {
+                jugador1.puntaje++;
+                if (jugador1.puntaje >= LIMITE_PUNTOS) {
+                    finDePartida = true;
+                    juegoActivo = false;
+                    clearInterval(loopJuego);
+                } else {
+                    resetPelota();
+                }
+            }
+        }
+
+        function ejecutarJuego() {
+            actualizar();
+            dibujarTablero();
+        }
+
+        btnIniciar.addEventListener("click", () => {
+            if (finDePartida) reiniciarMarcador(); // Si terminó, inicia una nueva automáticamente
+
+            if (!juegoActivo) {
+                juegoActivo = true;
+                loopJuego = setInterval(ejecutarJuego, 1000 / 60);
+            } else {
+                juegoActivo = false;
+                clearInterval(loopJuego);
+            }
+        });
+
+        dibujarTablero();
+    </script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTORIALES - ELEMENT PC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #f4f7f6;
+            background-image: radial-gradient(#007bff1a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .main-tutorial-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: none;
+            margin-bottom: 40px;
+        }
+
+        .video-side {
+            background: #000;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-side {
+            padding: 30px;
+        }
+
+        .tutorial-thumb {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+
+        .tutorial-thumb:hover {
+            transform: translateY(-10px);
+        }
+
+        .tutorial-thumb img {
+            border-radius: 8px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            height: 150px;
+        }
+
+        .section-title {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .nav-table-container {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        
+        .table-nav-custom td {
+            transition: background 0.3s;
+        }
+
+        .table-nav-custom td:hover {
+            background-color: #0056b3 !important;
+        }
+
+        /* ================= ESTILOS DEL NUEVO JUEGO ================= */
+        .game-container {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 2px solid #28a745;
+            overflow: hidden;
+        }
+        .step-item {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+        .step-item:hover {
+            border-color: #28a745;
+            background: #f1fcf4;
+        }
+        .step-text {
+            font-weight: 600;
+            color: #495057;
+        }
+        .btn-arrow {
+            padding: 2px 8px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">INICIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenido">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag1.html">ARTICULOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag2.html">PREENSAMBLADAS</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="sanchezpag3.html">TUTORIALES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag4.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag5.html">PEDIDOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practica4.html">BIOGRAFIA</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar tutorial..." aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <img src="BANNERPC.jpeg" width="100%" height="auto" alt="Banner Tutoriales">
+    
+    <div class="container">
+
+        <div class="text-center section-title">
+            <h1 class="display-4 font-weight-bold">CENTRO DE APRENDIZAJE</h1>
+            <p class="lead text-muted"><i class="fas fa-graduation-cap"></i> Aprende a armar y optimizar tu equipo como un profesional</p>
+        </div>
+
+        <div class="row main-tutorial-card no-gutters">
+            <div class="col-md-7 video-side">
+                <video width="100%" controls poster="thumb-video.jpg">
+                    <source src="armarpc.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+            <div class="col-md-5 info-side">
+                <h3 class="font-weight-bold text-primary">Guía Maestra: Armado desde cero</h3>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 1. Instalación del Procesador y RAM.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 2. Montaje de la Motherboard.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 3. Conexión de la Fuente de Poder.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 4. Instalación de la Tarjeta de Video.</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 5. Gestión de cables y encendido.</li>
+                </ul>
+                <div class="mt-4 p-3 bg-light rounded">
+                    <p class="mb-1"><strong><i class="fas fa-signal"></i> Dificultad:</strong> Intermedia</p>
+                    <p class="mb-0"><strong><i class="fas fa-clock"></i> Tiempo estimado:</strong> 45 minutos</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center section-title">OTROS TUTORIALES</h2>
+        
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="tutorial-thumb">
+                    <img src="bios.jpg" width="100%" alt="BIOS">
+                    <h5>Configuración de BIOS</h5>
+                    <p class="small text-muted">Optimiza frecuencias y orden de arranque.</p>
+                    <a href="https://www.youtube.com/watch?v=IwXKMo5M1nE" target="_blank" class="btn btn-outline-primary btn-sm btn-block">Ver Video</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="tutorial-thumb">
+                    <img src="pasta.jpg" width="100%" alt="Pasta Térmica">
+                    <h5>Pasta Térmica</h5>
+                    <p class="small text-muted">Aprende la técnica perfecta para enfriar tu CPU.</p>
+                    <a href="https://www.youtube.com/watch?v=H3d9Mg-ZF0M" target="_blank" class="btn btn-outline-primary btn-sm btn-block">Ver Video</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="tutorial-thumb">
+                    <img src="windows.png" width="100%" alt="Windows 11">
+                    <h5>Instalar Windows 11</h5>
+                    <p class="small text-muted">Crea un USB booteable e instala desde cero.</p>
+                    <a href="https://www.youtube.com/watch?v=6oaEGRaW82Q" target="_blank" class="btn btn-outline-primary btn-sm btn-block">Ver Video</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SECCIÓN DEL MINIJUEGO: ORDENA EL ENSAMBLE ================= -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-8 col-md-10">
+                <div class="game-container">
+                    <div class="bg-success text-white p-3 text-center">
+                        <h4 class="mb-0"><i class="fas fa-tools"></i> TALLER ELEMENT: Ordena el Ensamble</h4>
+                        <p class="small mb-0">Usa las flechas para ordenar los pasos de arriba a abajo en la secuencia correcta</p>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <!-- Lista de Pasos Dinámicos -->
+                        <div id="steps-list-container">
+                            <!-- Se genera por JavaScript -->
+                        </div>
+
+                        <!-- Zona de Control / Mensajes -->
+                        <div class="text-center mt-4">
+                            <div id="game-feedback" class="alert d-none py-2 px-3 font-weight-bold mb-3"></div>
+                            <button class="btn btn-success btn-lg px-5 shadow-sm" onclick="verifyOrder()"><i class="fas fa-check"></i> Verificar Ensamble</button>
+                            <button class="btn btn-outline-secondary ml-2" onclick="initGame()"><i class="fas fa-random"></i> Mezclar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================= FIN DEL MINIJUEGO ================= -->
+
+    </div>
+
+    <div class="container nav-table-container">
+        <div class="table-responsive">
+            <table class="table table-bordered text-center shadow-sm bg-white table-nav-custom">
+                <tr class="bg-primary">
+                    <td><a href="index.html" class="text-white font-weight-bold">INICIO</a></td>
+                    <td><a href="sanchezpag1.html" class="text-white font-weight-bold">ARTÍCULOS</a></td>
+                    <td><a href="sanchezpag2.html" class="text-white font-weight-bold">PREENSAMBLADAS</a></td>
+                    <td><a href="sanchezpag3.html" class="text-white font-weight-bold">TUTORIALES</a></td>
+                    <td><a href="sanchezpag4.html" class="text-white font-weight-bold">FAQ</a></td>
+                    <td><a href="sanchezpag5.html" class="text-white font-weight-bold">PEDIDOS</a></td>
+                    <td><a href="practica4.html" class="text-white font-weight-bold">biografia</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-4 text-left">
+                    <h5 class="text-primary font-weight-bold">ELEMENT PC</h5>
+                    <p class="small text-muted">Líderes en tecnología y ensamble de computadoras de alto rendimiento. Expertos en hardware, tu éxito es nuestro objetivo.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>SÍGUENOS</h5>
+                    <div class="h3">
+                        <a href="https://www.facebook.com/" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="https://www.instagram.com/" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://discord.com/" class="text-white mx-2"><i class="fab fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 text-right">
+                    <h5>UBICACIÓN</h5>
+                    <p class="small text-muted"><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123, Baja California.</p>
+                    <p class="small text-muted"><i class="fas fa-envelope"></i> contacto@elementpc.com</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="mb-0 small text-muted">&copy; 2026 Sanchez - Element PC. Todos los derechos reservados. Tutoriales de Hardware.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Lógica del Simulador de Ordenamiento -->
+    <script>
+        // Los pasos en su estricto orden lógico correcto (0 al 4)
+        const correctSteps = [
+            { id: "cpu", text: "Colocar el Procesador (CPU) y la Memoria RAM en la Tarjeta Madre fuera del gabinete." },
+            { id: "pasta", text: "Aplicar pasta térmica en el procesador y fijar el Disipador/Ventilador." },
+            { id: "mother", text: "Instalar los postes de soporte y atornillar la Tarjeta Madre dentro del Gabinete." },
+            { id: "power", text: "Montar la Fuente de Poder y conectar los cables de energía (24 pines y CPU)." },
+            { id: "gpu", text: "Insertar la Tarjeta de Video (GPU) en el puerto PCIe y conectar sus cables de energía." }
+        ];
+
+        let currentOrder = [];
+
+        // Inicializa el juego mezclando los elementos
+        function initGame() {
+            // Clonar el arreglo original
+            currentOrder = [...correctSteps];
+            
+            // Mezclar usando el algoritmo Fisher-Yates (asegurando que quede desordenado)
+            do {
+                for (let i = currentOrder.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [currentOrder[i], currentOrder[j]] = [currentOrder[j], currentOrder[i]];
+                }
+            } while (checkIfCorrect()); // Repetir si de casualidad se mezcla en orden correcto
+
+            hideFeedback();
+            renderSteps();
+        }
+
+        // Renderiza la lista HTML basada en el estado de currentOrder
+        function renderSteps() {
+            const container = document.getElementById('steps-list-container');
+            container.innerHTML = '';
+
+            currentOrder.forEach((step, index) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'step-item shadow-sm';
+                
+                // Botones deshabilitados en los extremos para evitar desbordes de índices
+                const isFirst = index === 0 ? 'disabled' : '';
+                const isLast = index === currentOrder.length - 1 ? 'disabled' : '';
+
+                itemDiv.innerHTML = `
+                    <div class="d-flex align-items-center">
+                        <span class="badge badge-dark mr-3 p-2 font-weight-bold" style="width: 30px;">${index + 1}</span>
+                        <span class="step-text">${step.text}</span>
+                    </div>
+                    <div class="btn-group-vertical ml-3">
+                        <button class="btn btn-outline-secondary btn-arrow btn-sm" onclick="moveStep(${index}, -1)" ${isFirst}>
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <button class="btn btn-outline-secondary btn-arrow btn-sm" onclick="moveStep(${index}, 1)" ${isLast}>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(itemDiv);
+            });
+        }
+
+        // Cambia la posición de un elemento en el array
+        function moveStep(index, direction) {
+            hideFeedback();
+            const targetIndex = index + direction;
+            if (targetIndex >= 0 && targetIndex < currentOrder.length) {
+                // Intercambio clásico
+                const temp = currentOrder[index];
+                currentOrder[index] = currentOrder[targetIndex];
+                currentOrder[targetIndex] = temp;
+                renderSteps();
+            }
+        }
+
+        // Verifica de manera interna si el orden actual coincide perfectamente con el correcto
+        function checkIfCorrect() {
+            for (let i = 0; i < currentOrder.length; i++) {
+                if (currentOrder[i].id !== correctSteps[i].id) return false;
+            }
+            return true;
+        }
+
+        // Función del botón principal que muestra los resultados en la interfaz
+        function verifyOrder() {
+            const feedbackDiv = document.getElementById('game-feedback');
+            feedbackDiv.classList.remove('d-none', 'alert-success', 'alert-danger', 'alert-warning');
+
+            if (checkIfCorrect()) {
+                feedbackDiv.classList.add('alert-success');
+                feedbackDiv.innerHTML = `<i class="fas fa-trophy mr-2"></i> ¡Ensamble Perfecto! Tu PC ha encendido con éxito. Eres un verdadero técnico de ELEMENT PC.`;
+            } else {
+                // Buscar dónde estuvo el primer error para darle una pista sutil
+                let wrongIndex = 0;
+                for (let i = 0; i < currentOrder.length; i++) {
+                    if (currentOrder[i].id !== correctSteps[i].id) {
+                        wrongIndex = i;
+                        break;
+                    }
+                }
+                
+                feedbackDiv.classList.add('alert-danger');
+                feedbackDiv.innerHTML = `<i class="fas fa-exclamation-triangle mr-2"></i> Error de hardware: Tu cortocircuito ocurrió cerca del Paso ${wrongIndex + 1}. ¡Revisa el flujo lógico e inténtalo de nuevo!`;
+            }
+        }
+
+        function hideFeedback() {
+            document.getElementById('game-feedback').classList.add('d-none');
+        }
+
+        // Ejecutar al cargar la página
+        window.onload = initGame;
+    </script>
+</body>
+</html>

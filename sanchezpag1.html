@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SANCHEZPAG1 - Element PC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body { background-color: #f4f7f6; }
+        
+        .table-custom {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: none !important;
+            margin-bottom: 50px;
+        }
+        
+        .table-custom td {
+            vertical-align: middle !important;
+            padding: 20px !important;
+            border: 1px solid #dee2e6 !important;
+        }
+
+        .product-img {
+            border-radius: 8px;
+            transition: transform 0.3s;
+            max-width: 180px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .product-img:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: #007bff;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .list-unstyled li {
+            padding: 2px 0;
+            color: #444;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">INICIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenido">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag1.html">ARTICULOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag2.html">PREENSAMBLADAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag3.html">TUTORIALES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag4.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sanchezpag5.html">PEDIDOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practica4.html">BIOGRAFIA</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar...">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <img src="BANNERPC.jpeg" width="100%" style="height: 300px; object-fit: cover;">
+
+    <div class="container-fluid px-5 mt-5">
+        <h1 class="text-center font-weight-bold mb-5">CATÁLOGO DE ARTÍCULOS</h1>
+
+   
+        <div class="text-center"><h2>TARJETAS GRÁFICAS</h2></div>
+        <table class="table table-custom mx-auto w-100">
+            <tr>
+                <td width="16%"><img src="tarjetagrafica1.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RX 580</li><li>8GB</li><li class="price">$2,492</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="tarjetagrafica2.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RX7600</li><li>8GB</li><li class="price">$5,749</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="tarjetagrafica3.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RX7600</li><li>QICK308</li><li>8GB</li><li class="price">$5,799</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="tarjetagrafica4.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RX6600</li><li>8GB</li><li class="price">$4,880</li>
+                    </ul>
+                </td>
+                <td><img src="tarjetagrafica5.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RX 9060XT</li><li>8GB</li><li class="price">$7,453</li>
+                    </ul>
+                </td>
+                <td><img src="tarjetagrafica6.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RTX 5060</li><li>8GB</li><li class="price">$6,949</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="tarjetagrafica7.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RTX 3050</li><li>6GB</li><li class="price">$5,344</li>
+                    </ul>
+                </td>
+                <td><img src="tarjetagrafica8.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RTX 3060</li><li>VENTUS</li><li>12GB</li><li class="price">$9,308</li>
+                    </ul>
+                </td>
+                <td><img src="tarjetagrafica9.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>RTX 5070</li><li>PNY</li><li>12GB</li><li class="price">$14,786</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+   
+        <div class="text-center"><h2>MOTHERBOARDS</h2></div>
+        <table class="table table-custom mx-auto w-100">
+            <tr>
+                <td width="16%"><img src="motherboard1.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>ASUS</li><li>X870E-E</li><li>WIFI</li><li class="price">$9,272</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="motherboard2.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>ASUS</li><li>X870E Hero</li><li>WIFI</li><li class="price">$12,474</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="motherboard3.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>ASUS</li><li>X870E-H</li><li>WIFI</li><li>Hatsune Miku</li><li class="price">$11,142</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="motherboard4.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>MSI</li><li>X870E</li><li>WIFI</li><li class="price">$5,493</li>
+                    </ul>
+                </td>
+                <td><img src="motherboard5.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>ASUS</li><li>Z890-E</li><li>WIFI</li><li class="price">$8,785</li>
+                    </ul>
+                </td>
+                <td><img src="motherboard6.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>GYGABYTE</li><li>AORUS Elite</li><li>X870</li><li>WIFI</li><li class="price">$5,176</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="motherboard7.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>ASUS</li><li>B850-G</li><li>WIFI</li><li class="price">$5,430</li>
+                    </ul>
+                </td>
+                <td><img src="motherboard8.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>ASUS</li><li>Z890-A</li><li>WIFI</li><li class="price">$6,135</li>
+                    </ul>
+                </td>
+                <td><img src="motherboard9.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>MSI</li><li>B850</li><li>MLG EDITION</li><li class="price">$5,806</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+
+        <div class="text-center"><h2>MEMORIAS RAM</h2></div>
+        <table class="table table-custom mx-auto w-100">
+            <tr>
+                <td width="16%"><img src="ram1.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Yosoo Health Gear</li><li>8GB</li><li>1600MHz</li><li>DDR3</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="ram2.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>XUXHOU</li><li>32GB</li><li>3200MHz</li><li>DDR4</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="ram3.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>GIGASTONE</li><li>32GB</li><li>3200MHz</li><li>DDR4</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="ram4.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Tangxi</li><li>8GB</li><li>DDR3</li><li>1600MHz</li>
+                    </ul>
+                </td>
+                <td><img src="ram5.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Kingston Fury Beast</li><li>16GB</li><li>3200MHz</li><li>DDR4</li>
+                    </ul>
+                </td>
+                <td><img src="ram6.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Kingston Fury Beast</li><li>16GB</li><li>3200MHz</li><li>DDR4</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="ram7.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>XPG Spectrix</li><li>16GB</li><li>3200MHz</li><li>DDR4</li><li class="price">$2,121</li>
+                    </ul>
+                </td>
+                <td><img src="ram8.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Kingston Fury Beast</li><li>8GB</li><li>3200Mhz</li><li>DDR4</li><li class="price">$1,339</li>
+                    </ul>
+                </td>
+                <td><img src="ram9.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Kingston Fury Impact</li><li>16GB</li><li>3200Mhz</li><li>DDR4</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <div class="text-center"><h2>GABINETES</h2></div>
+        <table class="table table-custom mx-auto w-100">
+            <tr>
+                <td width="16%"><img src="gabinete1.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>xcase</li><li>Cristal Templado</li><li>Ventiladores 3</li><li class="price">$999</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="gabinete2.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>xcase</li><li>Cristal Templado</li><li>ventiladores 3</li><li class="price">$1,095</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="gabinete3.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>KEDIERS</li><li>Vidrio Templado</li><li class="price">$2,299</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="gabinete4.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>xcase</li><li>Cristal Templado</li><li class="price">$2,795</li>
+                    </ul>
+                </td>
+                <td><img src="gabinete5.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Ocelot Gaming</li><li>4 Ventiladores</li><li>Cristal Templado</li><li class="price">$868</li>
+                    </ul>
+                </td>
+                <td><img src="gabinete6.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Ocelot Gaming</li><li>Cristal Templado</li><li>3 Ventiladores</li><li class="price">$739</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="gabinete7.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Ocelot Gaming</li><li>3 Ventiladores</li><li>Cristal Templado</li><li class="price">$813</li>
+                    </ul>
+                </td>
+                <td><img src="gabinete8.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>NZXT</li><li>Blanco</li><li>Cristal Templado</li><li class="price">$2,177</li>
+                    </ul>
+                </td>
+                <td><img src="gabinete9.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>KEDIERS</li><li>vidrio templado</li><li>Blanco</li><li class="price">$1,999</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+
+        <div class="text-center"><h2>PROCESADORES</h2></div>
+        <table class="table table-custom mx-auto w-100">
+            <tr>
+                <td width="16%"><img src="procesador1.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD 7 5700G</li><li>8 núcleos</li><li>AM4</li><li class="price">$3,219</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="procesador2.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD Ryzen 3 3200g</li><li>4 Cores</li><li>Am4</li><li class="price">$1,298</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="procesador3.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD 7 5700X</li><li>8 Núcleos</li><li>AM4</li><li class="price">$3,938</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="procesador4.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD 5 5500</li><li>6 Núcleos</li><li>AM4</li><li class="price">$1,620</li>
+                    </ul>
+                </td>
+                <td><img src="procesador5.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD 5 5600GT</li><li>6 Cores</li><li>AM4</li><li class="price">$2,727</li>
+                    </ul>
+                </td>
+                <td><img src="procesador6.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD 7 5700</li><li>8 núcleos</li><li>AM4</li><li class="price">$2,990</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="procesador7.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD 5 9600X</li><li>6CORE</li><li>AM5</li><li class="price">$4,294</li>
+                    </ul>
+                </td>
+                <td><img src="procesador8.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD 5 8600G</li><li>6CORE</li><li>AM5</li><li class="price">$3,143</li>
+                    </ul>
+                </td>
+                <td><img src="procesador9.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>AMD 5 5500X3D</li><li>6 Cores</li><li>AM4</li><li class="price">$3,837</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+
+        <div class="text-center"><h2>REFRIGERACIONES</h2></div>
+        <table class="table table-custom mx-auto w-100">
+            <tr>
+                <td width="16%"><img src="refrigeracion1.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>MSI 120 mm</li><li>COREFROZR AA13</li><li class="price">$429</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="refrigeracion2.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Thermalright</li><li>Aqua Elite 360 V3</li><li class="price">$1,347</li>
+                    </ul>
+                </td>
+                <td width="16%"><img src="refrigeracion3.jpg" class="product-img"></td>
+                <td width="16%"><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Corsair</li><li>Pantalla IPS LCD</li><li>360 mm</li><li class="price">$6,111</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="refrigeracion4.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>ARCTIC</li><li>Liquid Freezer III 280</li><li class="price">$2,429</li>
+                    </ul>
+                </td>
+                <td><img src="refrigeracion5.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>MSI</li><li>Coreliquid A13 360</li><li>360 mm</li><li class="price">$1,467</li>
+                    </ul>
+                </td>
+                <td><img src="refrigeracion6.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>MSI</li><li>Coreliquid A13 240</li><li>240mm</li><li class="price">$1,239</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="refrigeracion7.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>MSI</li><li>Coreliquid A13 360</li><li class="price">$1,547</li>
+                    </ul>
+                </td>
+                <td><img src="refrigeracion8.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Thermalright</li><li>Frozen Edge 240</li><li>3300RPM</li><li class="price">$1,119</li>
+                    </ul>
+                </td>
+                <td><img src="refrigeracion9.jpg" class="product-img"></td>
+                <td><strong>Características</strong>
+                    <ul class="list-unstyled small">
+                        <li>Cooler Master</li><li>MasterLiquid 360L</li><li>360mm</li><li class="price">$1,817</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container mt-5">
+        <div class="table-responsive">
+            <table class="table table-bordered text-center shadow-sm bg-white">
+                <tr class="bg-primary">
+                    <td><a href="index.html" class="text-white font-weight-bold">INICIO</a></td>
+                    <td><a href="sanchezpag1.html" class="text-white font-weight-bold">ARTÍCULOS</a></td>
+                    <td><a href="sanchezpag2.html" class="text-white font-weight-bold">PREENSAMBLADAS</a></td>
+                    <td><a href="sanchezpag3.html" class="text-white font-weight-bold">TUTORIALES</a></td>
+                    <td><a href="sanchezpag4.html" class="text-white font-weight-bold">FAQ</a></td>
+                    <td><a href="sanchezpag5.html" class="text-white font-weight-bold">PEDIDOS</a></td>
+                    <td><a href="practica4.html" class="text-white font-weight-bold">biografia</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-primary font-weight-bold">ELEMENT PC</h5>
+                    <p class="small text-muted">Líderes en tecnología y ensamble de computadoras de alto rendimiento.</p>
+                </div> 
+                <div class="col-md-4 mb-3">
+                    <h5>SÍGUENOS</h5>
+                    <div class="h3">
+                        <a href="https://facebook.com" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discord.com" class="text-white mx-2"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>UBICACIÓN</h5>
+                    <p class="small text-muted"><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123, Baja California.</p>
+                    <p class="small text-muted"><i class="fas fa-envelope"></i> contacto@elementpc.com</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="mb-0 small">&copy; 2026 Sanchez - Element PC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
